@@ -16,3 +16,7 @@ parameters:
 - name: cert_secret
   description: "This is the name of the secret containing the certificate for the argocd dns name"
   default: "argo-custom-cert"
+- name: argo_image_version
+  description: "This is the tag or the sha of the argoproj/argocd image"
+  default: "sha256:da25560084a0cb4657ecafcf5bfe9a88ea87589e1ed04beb259292908eaea43c"
+  trigger: update

@@ -4,6 +4,13 @@ metadata:
   name: {{ .Name }}-argocd
   namespace: {{ .Namespace }}
 spec:
+  version: {{ .Params.argo_image_version }}
+  resourceCustomizations: |
+    extensions/Ingress:
+        health.lua: |
+          hs = {}
+          hs.status = "Healthy"
+          return hs    
   controller:
     resources:
       limits:

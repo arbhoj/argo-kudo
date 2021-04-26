@@ -20,3 +20,9 @@ parameters:
   description: "This is the tag or the sha of the argoproj/argocd image"
   default: "sha256:da25560084a0cb4657ecafcf5bfe9a88ea87589e1ed04beb259292908eaea43c"
   trigger: update
+- name: max_replicas
+  description: "Max replicas value for HPA for argocd server"
+  default: 4
+- name: min_replicas
+  description: "Min replicas value for HPA for argocd server"
+  default: 4
